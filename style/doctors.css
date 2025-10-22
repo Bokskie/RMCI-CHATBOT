@@ -1,0 +1,336 @@
+.rmci-doctors-page-container
+{
+    padding: 60px 20px;
+}
+
+.rmci-doctors-header-container
+{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.rmci-doctors-header
+{
+    font-size: var(--wp-represent-font-size-x-large);
+    font-weight: 700;
+    color: var(--text-color-black);
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.rmci-doctors-header::after
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, var(--button-background), var(--primary-color), var(--button-background));
+    border-radius: 2px;
+}
+
+.rmci-doctors-paragraph
+{
+    font-size: var(--wp-represent-font-size-normal);
+    color: var(--text-color-gray);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.rmci-doctors-grid
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.doctor-card
+{
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.doctor-card:hover
+{
+    transform: translateY(-10px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+.doctor-card img
+{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+}
+
+.doctor-info
+{
+    padding: 20px;
+    text-align: center;
+}
+
+.doctor-name
+{
+    font-size: var(--wp-represent-font-size-medium);
+    font-weight: 600;
+    color: var(--text-color-black);
+    margin-bottom: 5px;
+}
+
+.doctor-specialty
+{
+    font-size: var(--wp-represent-font-size-x-small);
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.modal-overlay
+{
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content
+{
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.4s ease;
+}
+
+.close-button
+{
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover
+{
+    color: #000;
+}
+
+.close-button:focus
+{
+    color: #000;
+}
+
+.modal-body
+{
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.modal-body img
+{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.modal-details h2
+{
+    font-size: var(--wp-represent-font-size-large);
+    color: var(--text-color-black);
+    margin-bottom: 5px;
+}
+
+.modal-details #modalDoctorSpecialty
+{
+    font-size: var(--wp-represent-font-size-normal);
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.modal-info-group
+{
+    margin: 25px 0;
+    font-size: var(--wp-represent-font-size-small);
+}
+
+.modal-info-group p {
+    margin-bottom: 10px;
+    color: var(--text-color-gray);
+}
+
+.modal-info-group i
+{
+    color: var(--primary-color);
+    width: 25px;
+}
+
+#modalDoctorBio
+{
+    font-size: var(--wp-represent-font-size-small);
+    line-height: 1.7;
+    color: var(--text-color-gray);
+}
+
+.modal-appointment-btn
+{
+    display: inline-block;
+    margin-top: 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color-white);
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.modal-appointment-btn:hover
+{
+    background-color: var(--button-background);
+    transform: translateY(-2px);
+}
+
+.appointment-modal-content
+{
+    max-width: 600px;
+}
+
+.appointment-form-container h2
+{
+    text-align: center;
+    font-size: var(--wp-represent-font-size-large);
+    margin-bottom: 10px;
+    color: var(--text-color-black);
+}
+
+.appointment-form-container p
+{
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--text-color-gray);
+}
+
+.appointment-form-container .form-success-message
+{
+    text-align: left;
+}
+
+.appointment-form-container .form-group-row
+{
+    display: flex;
+    gap: 20px;
+}
+
+.appointment-form-container .form-group
+{
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.appointment-form-container .form-group label
+{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--text-color-black);
+}
+
+.appointment-form-container .form-group input,
+.appointment-form-container .form-group textarea
+{
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.appointment-form-container .form-group input:focus,
+.appointment-form-container .form-group textarea:focus
+{
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(52, 189, 223, 0.2);
+}
+
+.appointment-form-container .form-submit-btn
+{
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+}
+
+.appointment-form-container .form-success-message
+{
+    background-color: #f0f8ff;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+}
+
+.appointment-form-container .form-success-message i
+{
+    font-size: 48px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.appointment-form-container .form-success-message h3
+{
+    font-size: 24px;
+    color: var(--text-color-black);
+    margin-bottom: 10px;
+}
+
+@keyframes fadeIn
+{
+    from { opacity: 0; } to { opacity: 1; }
+}
+@keyframes slideIn
+{
+    from { transform: translateY(-50px); opacity: 0; } to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 768px)
+{
+    .modal-content
+    {
+        margin: 20% auto;
+    }
+    .modal-body
+    {
+        flex-direction: column; align-items: center; text-align: center;
+    }
+    .modal-body img
+    {
+        margin-bottom: 20px;
+    }
+}

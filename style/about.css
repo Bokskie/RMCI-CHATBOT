@@ -1,0 +1,310 @@
+.about-container
+{
+    padding: 60px 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.about-home-page 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+.about-home-page-image,
+.about-home-info
+{
+}
+.about-home-page-image 
+{
+    position: relative;
+    z-index: 1;
+}
+.about-home-page-image::before
+{
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    width: 90%;
+    height: 90%;
+    background-color: var(--background-color-light-blue-accent);
+    border-radius: 15px;
+    z-index: -1;
+}
+
+.about-home-page-image img 
+{
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+.about-rmci-home-header 
+{
+    font-size: var(--wp-represent-font-size-x-large);
+    font-weight: 700;
+    color: var(--text-color-black);
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+.about-rmci-home-paragraph
+{
+    font-size: var(--wp-represent-font-size-normal);
+    color: var(--text-color-gray);
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+.about-rmci-info-cards 
+{
+    display: grid;
+    gap: 20px;
+}
+.about-rmci-info-card 
+{
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid var(--primary-color);
+    animation: fadeInUp 0.5s ease-out forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.about-rmci-info-card:hover 
+{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.about-rmci-info-card i 
+{
+    font-size: 28px;
+    color: var(--primary-color);
+    margin-right: 20px;
+    width: 40px;
+    text-align: center;
+}
+
+.about-rmci-info-card-header 
+{
+    font-size: var(--wp-represent-font-size-normal);
+    font-weight: 600;
+    margin: 0 0 5px 0;
+    color: var(--text-color-black);
+}
+
+.about-rmci-info-card-paragraph {
+    font-size: var(--wp-represent-font-size-x-small);
+    color: var(--text-color-gray);
+}
+
+.about-rmci-info-card:nth-child(1) { animation-delay: 0.2s; }
+.about-rmci-info-card:nth-child(2) { animation-delay: 0.4s; }
+.about-rmci-info-card:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.about-rmci-directory-content img
+{
+    width: 1250px;
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 3rem;
+}
+/*------------ RMCI DETAILS 2-COLUMN LAYOUT ---------------*/
+.about-details-container 
+{
+    display: flex;
+    gap: 50px;
+    padding: 60px 20px;
+    align-items: flex-start;
+}
+.about-details-sidebar 
+{
+    flex: 0 0 250px; 
+    position: sticky;
+    top: 100px; 
+}
+.about-rmci-sidebar-header 
+{
+    font-size: var(--wp-represent-font-size-normal);
+    font-weight: 600;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--primary-color);
+}
+.about-details-nav ul 
+{
+    list-style: none;
+    padding: 0;
+}
+.about-details-nav ul li a 
+{
+    display: block;
+    padding: 8px 0;
+    color: var(--text-color-gray);
+    text-decoration: none;
+    font-size: var(--wp-represent-font-size-x-small);
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+.about-details-nav ul li a:hover 
+{
+    color: var(--primary-color);
+    padding-left: 5px;
+}
+.about-details-content 
+{
+    flex: 1;
+    min-width: 0;
+}
+
+.about-details-nav ul li a.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+.about-content-section 
+{
+    margin-bottom: 60px;
+}
+.about-rmci-general-header 
+{
+    font-size: var(--wp-represent-font-size-large);
+    font-weight: 700;
+    color: var(--text-color-black);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.about-rmci-general-paragraph
+{
+    font-size: var(--wp-represent-font-size-normal);
+    line-height: 1.7;
+    color: var(--text-color-gray);
+    text-align: justify;
+}
+/* ---------- RESPONSIVE DESIGN ---------- */
+@media (max-width: 992px) {
+  .about-container {
+    padding: 60px 25px;
+  }
+
+  .about-home-page {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .about-home-page-image::before {
+    display: none;
+  }
+
+  .about-home-page-image img {
+    width: 85%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .about-home-header {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .about-home-paragraph {
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  .about-rmci-info-card {
+    padding: 18px;
+  }
+
+  .about-details-container {
+    flex-direction: column;
+    gap: 35px;
+    padding: 50px 25px;
+  }
+
+  .about-details-sidebar {
+    position: static;
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-details-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .about-details-nav ul li a {
+    padding: 8px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+
+  .about-details-nav ul li a:hover {
+    background-color: var(--background-color-light-blue-accent);
+    border-color: var(--primary-color);
+  }
+}
+
+@media (max-width: 600px) {
+  .about-container {
+    padding: 40px 15px;
+  }
+
+  .about-home-header {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+
+  .about-home-paragraph {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .about-rmci-info-card
+  {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .about-rmci-info-card
+{
+    flex-direction: column;
+    text-align: center;
+    border-left: none;
+    border-top: 4px solid var(--primary-color);
+  }
+
+  .about-rmci-info-card
+  i {
+    margin: 0 0 10px 0;
+  }
+
+  .about-details-nav h4 {
+    text-align: center;
+  }
+
+  .about-rmci-general-header {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .about-rmci-general-paragraph {
+    font-size: 15px;
+    text-align: justify;
+  }
+}

@@ -1,0 +1,67 @@
+/* --- Disclaimer Modal Styles --- */
+.disclaimer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 20px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.disclaimer-overlay.show {
+    display: flex;
+}
+
+.disclaimer-box {
+    background: var(--background-color-white);
+    padding: 30px 40px;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 100%;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    animation: fadeInScale 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.disclaimer-box h2 {
+    text-align: center;
+    font-size: var(--wp-represent-font-size-large);
+    color: var(--text-color-black);
+    margin-bottom: 20px;
+}
+
+.disclaimer-box p {
+    font-size: var(--wp-represent-font-size-x-small);
+    line-height: 1.7;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.disclaimer-box .button {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    font-size: var(--wp-represent-font-size-small);
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

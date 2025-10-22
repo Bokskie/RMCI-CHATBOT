@@ -1,0 +1,84 @@
+.rmci-facilities-page-container {
+    padding: 60px 20px;
+}
+
+.rmci-facilities-header-content {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.rmci-facility-header {
+    font-size: var(--wp-represent-font-size-x-large);
+    font-weight: 700;
+    color: var(--text-color-black);
+    margin-bottom: 15px;
+}
+
+.rmci-facility-paragraph {
+    font-size: var(--wp-represent-font-size-normal);
+    color: var(--text-color-gray);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.rmci-facilities-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.rmci-facility-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    cursor: pointer;
+}
+
+.rmci-facility-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.rmci-facility-image:hover img {
+    transform: scale(1.05);
+}
+
+.rmci-facility-image::after {
+    content: '\f00e';
+    font-family: 'Font Awesome 5 Free', 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(52, 189, 223, 0.7);
+    color: var(--text-color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.rmci-facility-image:hover::after {
+    opacity: 1;
+}
+
+.rmci-facility-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: var(--text-color-white);
+    padding: 30px 15px 15px 15px;
+    font-weight: 500;
+    font-size: var(--wp-represent-font-size-small);
+    transition: background 0.3s ease;
+}

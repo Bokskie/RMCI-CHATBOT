@@ -1,0 +1,55 @@
+@import 'main.css';
+@import 'header.css';
+@import 'home.css';
+@import 'footer.css';
+@import 'events.css';
+@import 'chatbot.css';
+@import 'disclaimer.css';
+@import 'scroll-to-top.css';
+:root
+{
+    --primary-color: #34bddf;
+    --secondary-color: #f5f1e9;
+    --tertiary-color: #b3afaf;
+
+    --background-color-white: #ffffff;
+    --background-color-light-blue-accent: #f0f8ff; 
+
+    --text-color-white: #fafafa;
+    --text-color-black: #000000;
+    --text-color-gray: #555;
+
+    --button-background: #14728a;
+    
+    --wp-represent-font-size-x-small: 14px;
+    --wp-represent-font-size-small: 16px;
+    --wp-represent-font-size-normal: 18px;
+    --wp-represent-font-size-medium: 24px;
+    --wp-represent-font-size-large: 28px;
+    --wp-represent-font-size-x-large: 36px;
+
+    --font-style-primary: 'Shadows Into Light', cursive;
+    --font-style-secondary: 'Rock Salt', cursive;
+    --font-style-third:'Architects Daughter', cursive;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--background-color-white);
+    color: var(--text-color-gray);
+}
+
+.light-theme
+{
+    --primary-color: #fefefe;
+    --secondary-color: rgb(20, 32, 43);
+    --third-color: rgb(18, 151, 151);
+    --fourth-color : rgb(36, 212, 212);
+}

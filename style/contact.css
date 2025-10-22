@@ -1,0 +1,189 @@
+.rmci-contact-page-container {
+    padding: 60px 20px;
+}
+
+.rmci-contact-header-container {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.rmci-contact-header {
+    font-size: var(--wp-represent-font-size-x-large);
+    font-weight: 700;
+    color: var(--text-color-black);
+    margin-bottom: 15px;
+}
+
+.rmci-contact-paragraph {
+    font-size: var(--wp-represent-font-size-normal);
+    color: var(--text-color-gray);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.rmci-contact-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.rmci-contact-details-header {
+    font-size: var(--wp-represent-font-size-large);
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--text-color-black);
+}
+
+.rmci-contact-details-paragraph {
+    color: var(--text-color-gray);
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.rmci-contact-get-in-touch .rmci-contact-card {
+    margin-bottom: 20px;
+}
+
+.rmci-contact-location .rmci-contact-card {
+    gap: 20px;
+}
+
+.rmci-contact-card {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rmci-contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.rmci-contact-card i {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-right: 20px;
+    width: 30px;
+}
+
+.rmci-contact-card-info h3 {
+    font-size: var(--wp-represent-font-size-small);
+    font-weight: 600;
+    margin: 0 0 5px 0;
+    color: var(--text-color-black);
+}
+
+.rmci-contact-card-info p {
+    font-size: var(--wp-represent-font-size-x-small);
+    color: var(--text-color-gray);
+    margin: 0;
+}
+
+.rmci-contact-card-info p a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+}
+.rmci-contact-card-info p a:hover {
+    text-decoration: underline;
+}
+
+.rmci-map-container {
+    margin-top: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.rmci-map-container iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+@media (max-width: 992px) {
+    .rmci-contact-content-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Contact Form Section --- */
+.rmci-contact-form-section {
+    margin-top: 60px;
+    padding-top: 60px;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.rmci-contact-form-section .rmci-contact-details-header,
+.rmci-contact-form-section .rmci-contact-details-paragraph {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contactForm {
+    max-width: 800px;
+    margin: 40px auto 0 auto;
+    text-align: left;
+}
+
+.form-group-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--text-color-black);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(52, 189, 223, 0.2);
+}
+
+.form-submit-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+}
+
+/* --- Form Success Message --- */
+.form-success-message {
+    display: none;
+    background-color: #f0f8ff;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 40px;
+    max-width: 800px;
+    margin: 40px auto 0 auto;
+}
+.form-success-message i { font-size: 48px; color: var(--primary-color); margin-bottom: 20px; }
+.form-success-message h3 { font-size: 24px; color: var(--text-color-black); margin-bottom: 10px; }
+.form-success-message p { color: var(--text-color-gray); }

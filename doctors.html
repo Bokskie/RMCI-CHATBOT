@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RMCI Find a Doctor</title>
+
+    <link rel="icon" type="image/png" href="./image/logo.PNG">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <link rel="stylesheet" type="text/css" href="./style/index.css">
+    <link rel="stylesheet" type="text/css" href="./style/doctors.css">
+</head>
+<body>
+      <header>
+        <div class="header">
+            <div class="header_margin">
+                <div class="header-container">
+                    <div class="header-logo">
+                        <img src="./image/logo.PNG" alt="RMCI-ORGLogo">
+                        <div class="header-logo-name">Rever Medical Center Inc.</div>
+                    </div>
+                    <div class="header-navbar">
+                        <ul>
+                            <li><a href="index.html" class="nav">HOME</a></li>
+                            <li><a href="about.html" class="nav">ABOUT</a></li>
+                            <li><a href="facilities.html" class="nav">FACILITIES</a></li>
+                            <li><a href="healthcare-services.html" class="nav">HEALTHCARE SERVICES</a></li>
+                            <li><a href="events.html" class="nav">EVENTS</a></li>
+                            <li><a href="contact.html" class="nav">CONTACT US</a></li>
+                            <li><a href="doctors.html" class="highlight" aria-current="page"><i class="fa-solid fa-magnifying-glass"></i> FIND A DOCTOR</a></li>
+                        </ul>
+                    </div>
+                    <div class="mobile-menu-icon" id="mobile-menu-icon">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="main_margin">
+            <section class="rmci-doctors-page-container">
+                <div class="rmci-doctors-header-container">
+                    <h1 class="rmci-doctors-header">Meet Our Specialists</h1>
+                    <p class="rmci-doctors-paragraph">Dedicated professionals committed to your health and well-being.</p>
+                </div>
+
+                <div class="rmci-doctors-grid">
+                    <!-- Doctor Card 1 - Palitan mo lang ang details -->
+                    <div class="doctor-card" 
+                         data-name="Dr. Jesus M. Jardin" 
+                         data-specialty="Otolaryngologist (ENT-HNS)" 
+                         data-contact="+63 917 123 4567" 
+                         data-schedule="Mon, Wed, Fri (9AM - 12PM)"
+                         data-room="Room 101"
+                         data-affiliations="President, RMCI; Former President, Philippine Hospital Association"
+                         data-bio="Dr. Jardin is a highly experienced ENT specialist with over 20 years of practice. He is the President of the hospital and a former president of the Philippine Hospital Association."
+                         data-image="./image/doctors/unknown-doctor.png">
+                        <img src="./image/doctors/unknown-doctor.png" alt="Dr. Jesus M. Jardin">
+                        <div class="doctor-info">
+                            <h3 class="doctor-name">Dr. Jesus M. Jardin</h3>
+                            <p class="doctor-specialty">Otolaryngologist (ENT-HNS)</p>
+                        </div>
+                    </div>
+
+                    <!-- Doctor Card 2 -->
+                    <div class="doctor-card" 
+                         data-name="Dr. Monique Lucia A. Jardin-Quing" 
+                         data-specialty="Otolaryngologist (ENT-HNS)" 
+                         data-contact="+63 917 234 5678" 
+                         data-schedule="Tue, Thu (1PM - 4PM)"
+                         data-room="Room 102"
+                         data-affiliations="Medical Director, RMCI; Fellow, Philippine Society of Otolaryngology-Head and Neck Surgery"
+                         data-bio="Dr. Jardin-Quing is the Medical Director and an active ENT-HNS consultant, specializing in head and neck surgery."
+                         data-image="./image/doctors/dra.monique.png">
+                        <img src="./image/doctors/dra.monique.png" alt="Dr. Monique Lucia A. Jardin-Quing">
+                        <div class="doctor-info">
+                            <h3 class="doctor-name">Dr. Monique Lucia A. Jardin-Quing</h3>
+                            <p class="doctor-specialty">Otolaryngologist (ENT-HNS)</p>
+                        </div>
+                    </div>
+
+                    <!-- Doctor Card 3 -->
+                    <div class="doctor-card" 
+                         data-name="Dr. Richard De Luna Quing" 
+                         data-specialty="Plastic Surgeon" 
+                         data-contact="+63 917 345 6789" 
+                         data-schedule="By Appointment"
+                         data-room="Room 103"
+                         data-affiliations="Head, Quality Assurance; Fellow, Philippine Association of Plastic, Reconstructive and Aesthetic Surgeons"
+                         data-bio="Dr. Quing handles the Quality Assurance Department and specializes in plastic surgery, burn and wound care."
+                         data-image="./image/doctors/dr.quing.png">
+                        <img src="./image/doctors/dr.quing.png" alt="Dr. Richard De Luna Quing">
+                        <div class="doctor-info">
+                            <h3 class="doctor-name">Dr. Richard De Luna Quing</h3>
+                            <p class="doctor-specialty">Plastic Surgeon</p>
+                        </div>
+                    </div>
+
+                    <!-- Magdagdag ka pa ng ibang doctor cards dito -->
+
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Modal Structure (Hidden by default) -->
+    <div id="doctorModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="modal-body">
+                <img id="modalDoctorImage" src="" alt="Doctor's Photo">
+                <div class="modal-details">
+                    <h2 id="modalDoctorName"></h2>
+                    <p id="modalDoctorSpecialty"></p>
+                    <div class="modal-info-group">
+                        <p><i class="fa-solid fa-hospital"></i> <strong>Clinic:</strong> <span id="modalDoctorRoom"></span></p>
+                        <p><i class="fa-solid fa-phone"></i> <strong>Contact:</strong> <span id="modalDoctorContact"></span></p>
+                        <p><i class="fa-solid fa-clock"></i> <strong>Clinic Schedule:</strong> <span id="modalDoctorSchedule"></span></p>
+                        <p><i class="fa-solid fa-award"></i> <strong>Affiliations:</strong> <span id="modalDoctorAffiliations"></span></p>
+                    </div>
+                    <p id="modalDoctorBio"></p>
+                    <button id="modalAppointmentBtn" class="button modal-appointment-btn">Request an Appointment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Appointment Request Modal (New) -->
+    <div id="appointmentRequestModal" class="modal-overlay">
+        <div class="modal-content appointment-modal-content">
+            <span class="close-button">&times;</span>
+            <div class="appointment-form-container">
+                <h2>Appointment Request</h2>
+                <p>You are requesting an appointment with <strong id="appointmentDoctorName"></strong>. Please fill out the form below.</p>
+                
+                <div id="appointmentSuccessMessage" class="form-success-message" style="display: none;">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <h3>Request Sent!</h3>
+                    <p>Thank you! Your appointment request has been sent. Our staff will contact you shortly to confirm your schedule.</p>
+                </div>
+
+                <form id="appointmentForm" action="https://formspree.io/f/xnngylgp" method="POST">
+                    <!-- Hidden field for the doctor's name -->
+                    <input type="hidden" id="doctorNameInput" name="Doctor_Name">
+                    <!-- Subject for the email -->
+                    <input type="hidden" id="subjectInput" name="_subject">
+
+                    <div class="form-group"><label for="patientName">Full Name</label><input type="text" id="patientName" name="Patient_Name" required></div>
+                    <div class="form-group-row">
+                        <div class="form-group"><label for="patientEmail">Email Address</label><input type="email" id="patientEmail" name="Patient_Email" required></div>
+                        <div class="form-group"><label for="patientPhone">Phone Number</label><input type="tel" id="patientPhone" name="Patient_Phone" required></div>
+                    </div>
+                    <div class="form-group"><label for="preferredDate">Preferred Date</label><input type="date" id="preferredDate" name="Preferred_Date" required></div>
+                    <div class="form-group"><label for="appointmentMessage">Additional Message (Optional)</label><textarea id="appointmentMessage" name="MESSAGE" rows="4"></textarea></div>
+                    <button type="submit" class="button form-submit-btn">Submit Request</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chatbot Widget -->
+    <div class="chat-widget-container">
+        <div id="chat-window" class="chat-window">
+            <div class="chat-header">
+                <p>RMCI Virtual Assistant</p>
+                <div class="chat-header-buttons">
+                    <button id="chatClearBtn" class="chat-header-btn" title="Clear Chat">
+                        <i class="fa-solid fa-eraser"></i>
+                    </button>
+                    <button id="chatCloseBtn" class="chat-header-btn" title="Close Chat">
+                        <i class="fa-solid fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="chat-body" class="chat-body">
+                <!-- Messages will be appended here by JS -->
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" placeholder="Type a message...">
+                <button id="chatSendBtn"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+        <div id="chat-bubble" class="chat-bubble">
+            <i class="fa-solid fa-comments"></i>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-column about-us">
+                    <img src="./image/logo.PNG" alt="RMCI Logo" class="footer-logo">
+                    <p>Your trusted partner in health, providing compassionate and high-quality medical care for the community.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="doctors.html">Find a Doctor</a></li>
+                        <li><a href="facilities.html">Facilities</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="healthcare-services.html">General Consultation</a></li>
+                        <li><a href="healthcare-services.html">In-Patient Care</a></li>
+                        <li><a href="healthcare-services.html">Diagnostic Radiology</a></li>
+                        <li><a href="healthcare-services.html">Clinical Laboratory</a></li>
+                        <li><a href="healthcare-services.html">...and more</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Get In Touch</h4>
+                    <ul class="contact-info">
+                        <li><i class="fa-solid fa-location-dot"></i><span>Zone 4, Capunuyan, Aplaya, Jasaan, Misamis Oriental</span></li>
+                        <li><i class="fa-solid fa-phone"></i><span>+63 88 8904412</span></li>
+                        <li><i class="fa-solid fa-envelope"></i><span>revermedicalcenter.hr1@gmail.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Rever Medical Center Inc. All Rights Reserved.</p>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/ReverMedicalCenterInc2022" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./function/doctors-section.js"></script>
+    <script src="./function/scroll-to-top.js"></script>
+    <script src="./function/header.js"></script>
+    <script src="./function/chatbot.js"></script>
+</body>
+</html>

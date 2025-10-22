@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RMCI CONTACT US</title>
+
+    <link rel="icon" type="image/png" href="./image/logo.PNG">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <link rel="stylesheet" type="text/css" href="./style/index.css">
+    <link rel="stylesheet" type="text/css" href="./style/contact.css">
+</head>
+<body>
+      <header>
+        <div class="header">
+            <div class="header_margin">
+                <div class="header-container">
+                    <div class="header-logo">
+                        <img src="./image/logo.PNG" alt="RMCI-ORGLogo">
+                        <div class="header-logo-name">Rever Medical Center Inc.</div>
+                    </div>
+                    <div class="header-navbar">
+                        <ul>
+                            <li><a href="index.html" class="nav">HOME</a></li>
+                            <li><a href="about.html" class="nav">ABOUT</a></li>
+                            <li><a href="facilities.html" class="nav">FACILITIES</a></li>
+                            <li><a href="healthcare-services.html" class="nav">HEALTHCARE SERVICES</a></li>
+                            <li><a href="events.html" class="nav">EVENTS</a></li>
+                            <li><a href="contact.html" class="nav" aria-current="page">CONTACT US</a></li>
+                            <li><a href="doctors.html" class="highlight"><i class="fa-solid fa-magnifying-glass"></i> FIND A DOCTOR</a></li>
+                        </ul>
+                    </div>
+                    <div class="mobile-menu-icon" id="mobile-menu-icon">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="main_margin">
+            <section class="rmci-contact-page-container">
+                <div class="rmci-contact-header-container">
+                    <div class="rmci-contact-header">Contact Us</div>
+                    <div class="rmci-contact-paragraph">We're here to help. Reach out to us for any inquiries or concerns.</div>
+                </div>
+
+                <div class="rmci-contact-content-wrapper">
+                    <!-- Left Column: Location -->
+                    <div class="rmci-contact-location">
+                        <div class="rmci-contact-details-header">Our Location</div>
+                        <div class="rmci-contact-card">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div class="rmci-contact-card-info">
+                                <h3>Address</h3>
+                                <p>Zone 4, Capunuyan, Aplaya, Jasaan, Misamis Oriental</p>
+                            </div>
+                        </div>
+                        <div class="rmci-map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.959658435781!2d124.76750837406259!3d8.599871795560562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32ffef2b8634634d%3A0x732b904813f83efa!2sRever%20Medical%20Center!5e0!3m2!1sen!2sph!4v1760863823074!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Contact Details -->
+                    <div class="rmci-contact-get-in-touch">
+                        <div class="rmci-contact-details-header">Get In Touch</div>
+                        <p class="rmci-contact-details-paragraph">Feel free to reach out to us. We are available 24/7 for emergency services.</p>
+                        <div class="rmci-contact-card">
+                            <i class="fa-solid fa-phone"></i>
+                            <div class="rmci-contact-card-info">
+                                <h3>Call Us</h3>
+                                <p>+63 88 8904412</p>
+                            </div>
+                        </div>
+                        <div class="rmci-contact-card">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div class="rmci-contact-card-info">
+                                <h3>Email Us</h3>
+                                <p>revermedicalcenter.hr1@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="rmci-contact-card">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <div class="rmci-contact-card-info">
+                                <h3>Follow Us on Facebook</h3>
+                                <p><a href="https://www.facebook.com/ReverMedicalCenterInc2022" target="_blank">facebook.com/revermedicalcenter</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form Section -->
+                <div class="rmci-contact-form-section">
+                    <div class="rmci-contact-details-header">Send Us a Message</div>
+                    <p class="rmci-contact-details-paragraph">Have a question or need more information? Fill out the form below and we'll get back to you as soon as possible.</p>
+                    
+                    <!-- Form Success Message -->
+                    <div id="formSuccessMessage" class="form-success-message">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <h3>Thank You!</h3>
+                        <p>Your message has been sent successfully. We will get back to you shortly.</p>
+                    </div>
+
+                    <!-- The Form -->
+                    <form id="contactForm" action="https://formspree.io/f/mvgwndbp" method="POST">
+                        <div class="form-group-row">
+                            <div class="form-group"><label for="name">Full Name</label><input type="text" id="name" name="Fullname" required></div>
+                            <div class="form-group"><label for="email" name="Email" id="email">Email Address</label><input type="email" id="email" name="Email" required></div>
+                        </div>
+                        <div class="form-group"><label for="subject">Subject</label><input type="text" id="subject" name="Subject" required></div>
+                        <div class="form-group"><label for="message">Message</label><textarea id="message" name="Message" rows="6" required></textarea></div>
+                        <button type="submit" class="button form-submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <!-- Chatbot Widget -->
+    <div class="chat-widget-container">
+        <div id="chat-window" class="chat-window">
+            <div class="chat-header">
+                <p>RMCI Virtual Assistant</p>
+                <div class="chat-header-buttons">
+                    <button id="chatClearBtn" class="chat-header-btn" title="Clear Chat">
+                        <i class="fa-solid fa-eraser"></i>
+                    </button>
+                    <button id="chatCloseBtn" class="chat-header-btn" title="Close Chat">
+                        <i class="fa-solid fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="chat-body" class="chat-body">
+                <!-- Messages will be appended here by JS -->
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" placeholder="Type a message...">
+                <button id="chatSendBtn"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+        <div id="chat-bubble" class="chat-bubble">
+            <i class="fa-solid fa-comments"></i>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-column about-us">
+                    <img src="./image/logo.PNG" alt="RMCI Logo" class="footer-logo">
+                    <p>Your trusted partner in health, providing compassionate and high-quality medical care for the community.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="doctors.html">Find a Doctor</a></li>
+                        <li><a href="facilities.html">Facilities</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="healthcare-services.html">General Consultation</a></li>
+                        <li><a href="healthcare-services.html">In-Patient Care</a></li>
+                        <li><a href="healthcare-services.html">Diagnostic Radiology</a></li>
+                        <li><a href="healthcare-services.html">Clinical Laboratory</a></li>
+                        <li><a href="healthcare-services.html">...and more</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Get In Touch</h4>
+                    <ul class="contact-info">
+                        <li><i class="fa-solid fa-location-dot"></i><span>Zone 4, Capunuyan, Aplaya, Jasaan, Misamis Oriental</span></li>
+                        <li><i class="fa-solid fa-phone"></i><span>+63 88 8904412</span></li>
+                        <li><i class="fa-solid fa-envelope"></i><span>revermedicalcenter.hr1@gmail.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Rever Medical Center Inc. All Rights Reserved.</p>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/ReverMedicalCenterInc2022" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./function/scroll-to-top.js"></script>
+    <script src="./function/header.js"></script>
+    <script src="./function/chatbot.js"></script>
+    <script src="./function/contact-form.js"></script>
+</body>
+</html>

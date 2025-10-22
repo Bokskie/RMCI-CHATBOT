@@ -1,0 +1,151 @@
+.home-page
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px; 
+    align-items: center;
+    min-height: calc(100vh - 100px);
+    padding: 60px 20px;
+}
+.home-page-image 
+{
+    display: flex;
+    justify-content: center;
+    animation: fadeInRight 1s ease-in-out;
+}
+.home-page-image img 
+{
+    width: 500px; 
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.home-page-content
+{
+    max-width: 100%;
+    animation: fadeInLeft 1s ease-in-out;
+}
+.home-page-content-header
+{
+    font-weight: 700;
+    font-size: var(--wp-represent-font-size-x-large);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+.home-page-content-header span
+{
+    color: var(--primary-color);
+}
+.home-page-content-paragraph
+{
+    font-size: var(--wp-represent-font-size-normal);
+    line-height: 1.7; 
+    color: var(--text-color-gray);
+    margin-bottom: 30px;
+}
+.home-page-content-btn
+{
+}
+
+.why-choose-us-section
+{
+    padding: 80px 20px;
+    background-color: var(--background-color-light-blue-accent);
+}
+
+.section-header
+{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2
+{
+    font-size: var(--wp-represent-font-size-x-large);
+    font-weight: 700;
+    color: var(--text-color-black);
+    margin-bottom: 15px;
+}
+
+.section-header p
+{
+    font-size: var(--wp-represent-font-size-normal);
+    color: var(--text-color-gray);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.features-grid
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.feature-card
+{
+    background-color: var(--background-color-white);
+    padding: 40px 30px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover
+{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(52, 189, 223, 0.15);
+}
+
+.feature-icon
+{
+    font-size: 48px;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+.feature-card h3
+{
+    font-size: var(--wp-represent-font-size-medium);
+    font-weight: 600;
+    color: var(--text-color-black);
+    margin-bottom: 15px;
+}
+
+.feature-card p
+{
+    font-size: var(--wp-represent-font-size-small);
+    line-height: 1.7;
+    color: var(--text-color-gray);
+}
+
+@media (max-width: 768px)
+{
+    .why-choose-us-section
+    {
+        padding: 60px 20px;
+    }
+}
+
+@media (max-width: 768px)
+{
+    .home-page
+    {
+        grid-template-columns: 1fr; 
+        text-align: center; 
+        min-height: auto; 
+        padding: 40px 20px;
+    }
+    .home-page-image
+    {
+        order: -1; 
+    }
+    .home-page-content-btn
+    {
+        display: flex;
+        justify-content: center;
+    }
+}

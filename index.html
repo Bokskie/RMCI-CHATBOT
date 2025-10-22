@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RMCI HOME PAGE</title>
+
+    <link rel="icon" type="image/png" href="./image/logo.PNG">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <link rel="stylesheet" type="text/css" href="./style/index.css">
+</head>
+<body>
+
+    <!-- Disclaimer Modal -->
+    <div id="disclaimer-overlay" class="disclaimer-overlay">
+        <div class="disclaimer-box">
+            <h2>Disclaimer</h2>
+            <p>
+                The information provided on this website is for general informational purposes only. All information on the site is provided in good faith, however, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the site.
+            </p>
+            <p>
+                This website does not provide medical advice. The information, including but not limited to, text, graphics, images, and other material contained on this website are for informational purposes only. No material on this site is intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition or treatment.
+            </p>
+            <button id="accept-disclaimer-btn" class="button">Accept and Continue</button>
+        </div>
+    </div>
+
+    <header>
+        <div class="header">
+            <div class="header_margin">
+                <div class="header-container">
+                    <div class="header-logo">
+                        <img src="./image/logo.PNG" alt="RMCI-ORGLogo">
+                        <div class="header-logo-name">Rever Medical Center Inc.</div>
+                    </div>
+                    <div class="header-navbar">
+                        <ul>
+                            <li><a href="index.html" class="nav" aria-current="page">HOME</a></li>
+                            <li><a href="about.html" class="nav">ABOUT</a></li>
+                            <li><a href="facilities.html" class="nav">FACILITIES</a></li>
+                            <li><a href="healthcare-services.html" class="nav">HEALTHCARE SERVICES</a></li>
+                            <li><a href="events.html" class="nav">EVENTS</a></li>
+                            <li><a href="contact.html" class="nav">CONTACT US</a></li>
+                            <li><a href="doctors.html" class="highlight"><i class="fa-solid fa-magnifying-glass"></i> FIND A DOCTOR</a></li>
+                        </ul>
+                    </div>
+                    <div class="mobile-menu-icon" id="mobile-menu-icon">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="main">
+            <div class="main_margin">
+                <div class="main-container">
+                    <section class="home-container">
+                        <div class="home-page">
+                            <div class="home-page-image">
+                                <img src="./image/home.jpeg" alt="">
+                            </div>
+                            <div class="home-page-content">
+                                <div class="home-page-content-header"><span>Stay</span> Safe, <span>Stay</span> Healthy.</div>
+                                <div class="home-page-content-paragraph">
+                                    At Rever Medical Center Inc., your health and safety are our top priority. 
+                                    We are committed to providing high-quality medical services with compassion, care, and excellence. 
+                                    Whether you need routine check-ups or specialized treatment, our dedicated team of healthcare professionals is here to support you every step of the way. 
+                                    Stay safe, stay healthy — because you deserve the best in care.
+                                </div>
+                                <div class="home-page-content-btn">
+                                    <a href="about.html" class="button">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Why Choose Us Section -->
+                    <section class="why-choose-us-section">
+                        <div class="section-header">
+                            <h2>Why Choose RMCI?</h2>
+                            <p>Your health is our priority. Here’s what sets us apart.</p>
+                        </div>
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fa-solid fa-user-doctor"></i>
+                                </div>
+                                <h3>Expert Medical Team</h3>
+                                <p>Our specialists are highly trained and dedicated to providing compassionate, personalized care.</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fa-solid fa-microscope"></i>
+                                </div>
+                                <h3>Modern Facilities</h3>
+                                <p>Equipped with state-of-the-art technology for accurate diagnosis and effective treatment.</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fa-solid fa-truck-medical"></i>
+                                </div>
+                                <h3>24/7 Emergency Services</h3>
+                                <p>Our emergency room is always open and ready to provide immediate medical attention.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Chatbot Widget -->
+    <div class="chat-widget-container">
+        <div id="chat-window" class="chat-window">
+            <div class="chat-header">
+                <p>RMCI Virtual Assistant</p>
+                <div class="chat-header-buttons">
+                    <button id="chatClearBtn" class="chat-header-btn" title="Clear Chat">
+                        <i class="fa-solid fa-eraser"></i>
+                    </button>
+                    <button id="chatCloseBtn" class="chat-header-btn" title="Close Chat">
+                        <i class="fa-solid fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="chat-body" class="chat-body">
+                <!-- Messages will be appended here by JS -->
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" placeholder="Type a message...">
+                <button id="chatSendBtn"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+        <div id="chat-bubble" class="chat-bubble">
+            <i class="fa-solid fa-comments"></i>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-column about-us">
+                    <img src="./image/logo.PNG" alt="RMCI Logo" class="footer-logo">
+                    <p>Your trusted partner in health, providing compassionate and high-quality medical care for the community.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="doctors.html">Find a Doctor</a></li>
+                        <li><a href="facilities.html">Facilities</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="healthcare-services.html">General Consultation</a></li>
+                        <li><a href="healthcare-services.html">In-Patient Care</a></li>
+                        <li><a href="healthcare-services.html">Diagnostic Radiology</a></li>
+                        <li><a href="healthcare-services.html">Clinical Laboratory</a></li>
+                        <li><a href="healthcare-services.html">...and more</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Get In Touch</h4>
+                    <ul class="contact-info">
+                        <li><i class="fa-solid fa-location-dot"></i><span>Zone 4, Capunuyan, Aplaya, Jasaan, Misamis Oriental</span></li>
+                        <li><i class="fa-solid fa-phone"></i><span>+63 88 8904412</span></li>
+                        <li><i class="fa-solid fa-envelope"></i><span>revermedicalcenter.hr1@gmail.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Rever Medical Center Inc. All Rights Reserved.</p>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/ReverMedicalCenterInc2022" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="./function/scroll-to-top.js"></script>
+    <script src="./function/disclaimer.js"></script>
+    <script src="./function/header.js"></script>
+    <script src="./function/chatbot.js"></script>
+</body>
+</html>

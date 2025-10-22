@@ -1,0 +1,29 @@
+.main_margin
+{
+    position: relative;
+    padding-top: 100px; 
+    width: 1250px;
+    max-width: 95%; 
+    margin: auto;
+    padding-bottom: 60px; 
+}
+.button 
+{   
+    background-color: var(--primary-color);
+    cursor: pointer;    
+    border-radius: 3rem;
+    padding: 12px 30px;
+    color: var(--text-color-white);
+    font-weight: 550;
+    border: none;
+    font-size: 15px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease; 
+}
+.button:hover 
+{
+    transform: scale(1.05);
+    background-color: var(--button-background);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}

@@ -1,0 +1,110 @@
+.rmci-services-page-container {
+    padding: 60px 20px;
+}
+
+.rmci-services-header-content {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.rmci-services-header {
+    font-size: var(--wp-represent-font-size-x-large);
+    font-weight: 700;
+    color: var(--text-color-black);
+    margin-bottom: 15px;
+}
+
+.rmci-services-paragraph {
+    font-size: var(--wp-represent-font-size-normal);
+    color: var(--text-color-gray);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.rmci-services-filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border: 1px solid var(--tertiary-color);
+    background-color: var(--background-color-white);
+    color: var(--text-color-gray);
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: var(--background-color-light-blue-accent);
+    color: var(--primary-color);
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: var(--text-color-white);
+    border-color: var(--primary-color);
+}
+
+.rmci-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.rmci-service-box {
+    background-color: var(--background-color-white);
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.rmci-service-box.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.rmci-service-box.hide {
+    transform: scale(0.9);
+    opacity: 0;
+    display: none;
+}
+
+.rmci-service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.rmci-service-box i {
+    font-size: 48px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.rmci-service-box:hover i {
+    color: var(--button-background);
+}
+
+.rmci-service-box-header {
+    font-size: var(--wp-represent-font-size-normal);
+    font-weight: 600;
+    color: var(--text-color-black);
+    margin-bottom: 10px;
+}
+
+.rmci-service-box-paragraph {
+    font-size: var(--wp-represent-font-size-x-small);
+    color: var(--text-color-gray);
+    line-height: 1.6;
+}

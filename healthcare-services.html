@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RMCI Healthcare Services</title>
+
+    <link rel="icon" type="image/png" href="./image/logo.PNG">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <link rel="stylesheet" type="text/css" href="./style/index.css">
+    <link rel="stylesheet" type="text/css" href="./style/healthcare-services.css">
+</head>
+<body>
+      <header>
+        <div class="header">
+            <div class="header_margin">
+                <div class="header-container">
+                    <div class="header-logo">
+                        <img src="./image/logo.PNG" alt="RMCI-ORGLogo">
+                        <div class="header-logo-name">Rever Medical Center Inc.</div>
+                    </div>
+                    <div class="header-navbar">
+                        <ul>
+                            <li><a href="index.html" class="nav">HOME</a></li>
+                            <li><a href="about.html" class="nav">ABOUT</a></li>
+                            <li><a href="facilities.html" class="nav">FACILITIES</a></li>
+                            <li><a href="healthcare-services.html" class="nav" aria-current="page">HEALTHCARE SERVICES</a></li>
+                            <li><a href="events.html" class="nav">EVENTS</a></li>
+                            <li><a href="contact.html" class="nav">CONTACT US</a></li>
+                            <li><a href="doctors.html" class="highlight"><i class="fa-solid fa-magnifying-glass"></i> FIND A DOCTOR</a></li>
+                        </ul>
+                    </div>
+                    <div class="mobile-menu-icon" id="mobile-menu-icon">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="main_margin"> 
+            <section class="rmci-services-page-container">
+                <div class="rmci-services-header-content">
+                    <div class="rmci-services-header">
+                        Our Healthcare Services
+
+                    </div>
+                    <div class="rmci-services-paragraph">
+                        Comprehensive and compassionate care tailored to your needs.
+                    </div>
+                </div>
+
+                <div class="rmci-services-filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Services</button>
+                    <button class="filter-btn" data-filter="general">General Care</button>
+                    <button class="filter-btn" data-filter="diagnostics">Diagnostics</button>
+                    <button class="filter-btn" data-filter="specialty">Specialty Centers</button>
+                    <button class="filter-btn" data-filter="women-children">Women & Children</button>
+                </div>
+
+                <div class="rmci-services-grid">
+                    <div class="rmci-service-box" data-category="general">
+                        <i class="fa-solid fa-stethoscope"></i>
+                        <div class="rmci-service-box-header">
+                            General Consultation
+                        </div>
+                        <div class="rmci-service-box-paragraph">
+                            Expert medical advice and primary care for your day-to-day health concerns.
+                        </div>
+                    </div>
+                    <div class="rmci-service-box" data-category="general">
+                        <i class="fa-solid fa-bed-pulse"></i>
+                        <div class="rmci-service-box-header">
+                            In-Patient Care
+                        </div>
+                        <div class="rmci-service-box-paragraph">
+                            Comfortable and comprehensive care for patients requiring hospital admission.
+                        </div>
+                    </div>
+                    <div class="rmci-service-box" data-category="diagnostics">
+                        <i class="fa-solid fa-x-ray"></i>
+                        <div class="rmci-service-box-header">
+                            Diagnostic Radiology
+                        </div>
+                        <div class="rmci-service-box-paragraph">
+                            Advanced imaging services including X-ray and Ultrasound for accurate diagnosis.
+                        </div>
+                    </div>
+                    <div class="rmci-service-box" data-category="diagnostics">
+                        <i class="fa-solid fa-microscope"></i>
+                        <div class="rmci-service-box-header">
+                            Clinical Laboratory
+                        </div>
+                        <div class="rmci-service-box-paragraph">
+                            State-of-the-art laboratory for precise and timely diagnostic tests.
+                        </div>
+                    </div>
+                    <div class="rmci-service-box" data-category="specialty">
+                        <i class="fa-solid fa-ear-listen"></i>
+                        <div class="rmci-service-box-header">
+                            E.N.T-Head and Neck Center
+                        </div>
+                        <div class="rmci-service-box-paragraph">
+                            Specialized care for ear, nose, throat, and head & neck conditions.
+                        </div>
+                    </div>
+                    <div class="rmci-service-box" data-category="specialty">
+                        <i class="fa-solid fa-eye"></i>
+                        <div class="rmci-service-box-header">
+                            Ophthalmology (Eye Center)
+                        </div>
+                        <div class="rmci-service-box-paragraph">
+                            Complete eye care services from routine exams to advanced surgical procedures.
+                        </div>
+                    </div>
+                    <div class="rmci-service-box" data-category="specialty">
+                        <i class="fa-solid fa-face-smile-beam"></i>
+                        <div class="rmci-service-box-header">
+                            Cleft Lip & Palate Surgery
+                        </div>
+                        <div class="rmci-service-box-paragraph">
+                            Life-changing surgical care for patients with cleft conditions, in partnership with organizations like Smile Train.
+                        </div>
+                    </div>
+                    <div class="rmci-service-box" data-category="specialty">
+                        <i class="fa-solid fa-band-aid"></i>
+                        <div class="rmci-service-box-header">
+                            Plastic Surgery & Wound Care
+                        </div>
+                        <div class="rmci-service-box-paragraph">
+                            Specialized procedures for reconstruction, burn and wound management.
+                        </div>
+                    </div>
+                    <div class="rmci-service-box" data-category="specialty">
+                        <i class="fa-solid fa-bone"></i>
+                        <div class="rmci-service-box-header">
+                            Orthopedic Surgery
+                        </div>
+                        <div class="rmci-service-box-paragraph">
+                            Treatment for musculoskeletal trauma, sports injuries, and degenerative diseases.
+                        </div>
+                    </div>
+                    <div class="rmci-service-box" data-category="women-children">
+                        <i class="fa-solid fa-baby"></i>
+                        <div class="rmci-service-box-header">
+                            Pediatrics
+                        </div>
+                        <div class="rmci-service-box-paragraph">
+                            Compassionate healthcare for infants, children, and adolescents.
+                        </div>
+                    </div>
+                    <div class="rmci-service-box" data-category="women-children">
+                        <i class="fa-solid fa-person-pregnant"></i>
+                        <div class="rmci-service-box-header">
+                            Obstetrics & Gynecology
+                        </div>
+                        <div class="rmci-service-box-paragraph">
+                            Comprehensive care for women's health, from maternity to general wellness.
+                        </div>
+                    </div>
+                    <div class="rmci-service-box" data-category="other">
+                        <i class="fa-solid fa-helmet-safety"></i>
+                        <div class="rmci-service-box-header">
+                            Industrial & Occupational Medicine
+                        </div>
+                        <div class="rmci-service-box-paragraph">
+                            Healthcare services tailored for the needs of companies and their employees.
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <!-- Chatbot Widget -->
+    <div class="chat-widget-container">
+        <div id="chat-window" class="chat-window">
+            <div class="chat-header">
+                <p>RMCI Virtual Assistant</p>
+                <div class="chat-header-buttons">
+                    <button id="chatClearBtn" class="chat-header-btn" title="Clear Chat">
+                        <i class="fa-solid fa-eraser"></i>
+                    </button>
+                    <button id="chatCloseBtn" class="chat-header-btn" title="Close Chat">
+                        <i class="fa-solid fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="chat-body" class="chat-body">
+                <!-- Messages will be appended here by JS -->
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" placeholder="Type a message...">
+                <button id="chatSendBtn"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+        <div id="chat-bubble" class="chat-bubble">
+            <i class="fa-solid fa-comments"></i>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-column about-us">
+                    <img src="./image/logo.PNG" alt="RMCI Logo" class="footer-logo">
+                    <p>Your trusted partner in health, providing compassionate and high-quality medical care for the community.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="doctors.html">Find a Doctor</a></li>
+                        <li><a href="facilities.html">Facilities</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="healthcare-services.html">General Consultation</a></li>
+                        <li><a href="healthcare-services.html">In-Patient Care</a></li>
+                        <li><a href="healthcare-services.html">Diagnostic Radiology</a></li>
+                        <li><a href="healthcare-services.html">Clinical Laboratory</a></li>
+                        <li><a href="healthcare-services.html">...and more</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Get In Touch</h4>
+                    <ul class="contact-info">
+                        <li><i class="fa-solid fa-location-dot"></i><span>Zone 4, Capunuyan, Aplaya, Jasaan, Misamis Oriental</span></li>
+                        <li><i class="fa-solid fa-phone"></i><span>+63 88 8904412</span></li>
+                        <li><i class="fa-solid fa-envelope"></i><span>revermedicalcenter.hr1@gmail.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Rever Medical Center Inc. All Rights Reserved.</p>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/ReverMedicalCenterInc2022" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./function/scroll-to-top.js"></script>
+    <script src="./function/header.js"></script>
+    <script src="./function/service-animation.js"></script>
+    <script src="./function/chatbot.js"></script>
+    <script src="./function/service-filter.js"></script>
+</body>
+</html>
